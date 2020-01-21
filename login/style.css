@@ -1,0 +1,24 @@
+body{
+    background: grey;   
+}
+h1{
+    text-align: center;
+}
+#form{
+    border: solid grey 1px;
+    width: 20%;
+    border-radius: 5px;
+    margin: 50px auto;
+    background: white;
+    padding: 50px;
+}
+#form ul li{
+    text-decoration: none;
+    display: inline;
+}
+#btn{
+    color: black;
+    background: grey;
+    padding: 0px;
+    margin-left: 70px;
+}
