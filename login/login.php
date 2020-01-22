@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require 'process.php';
 
     if(isset($_POST["login"])){
@@ -9,6 +10,15 @@
         if( mysqli_num_rows($result) > 0){
             $row =mysqli_fetch_assoc($result);
             header("Location:../index.html");
+
+            if($result > 0){
+                $_SESSION['username'] = $username;
+                $_SESSION['status'] = "login";
+                header("location:../index.php");
+            }else{
+                header("location:index.php?pesan=gagal");
+            }
+
         }
         $error = true;
     }

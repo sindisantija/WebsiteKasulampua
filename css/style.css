@@ -187,6 +187,7 @@ i:before {
   border-radius: 0px;
   padding: 0px;
   background:  #171717;
+  color : white;
 }
 
 .main_menu_area .navbar .navbar-toggler span {
@@ -620,9 +621,7 @@ i:before {
   overflow: hidden;
 }
 
-.team_img_inner .team_img_item img{
-  overflow: hidden;
-}
+
 
 /* End Team People Area css
 ============================================================================================ */

@@ -8,6 +8,7 @@
         <link rel="icon" href="" type="image/x-icon" />
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Kasulampua</title>
+        <link rel="stylesheet" href="css/css.css">
 
         <!-- Icon css link -->
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -15,13 +16,10 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         
         <!-- Rev slider css -->
-        <link href="vendors/revolution/css/settings.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <link href="vendors/revolution/css/layers.css" rel="stylesheet">
-        <link href="vendors/revolution/css/navigation.css" rel="stylesheet">
+
         
         <!-- Extra plugin css -->
-        <link href="vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
 
         <!-- Script -->
@@ -44,7 +42,12 @@
   }
     </style>
     <body>
-        
+        <?php 
+        session_start();
+        if($_SESSION['status']!="login"){
+            header("location:login/login.php?pesan=belum_login");
+        }
+        ?>
         <!--================Header Menu Area =================-->
         <header class="main_menu_area">
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -264,7 +267,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-6">
                                     <div class="team_img_item">
-                                        <img src="img/tentang/kalimantan_1.jpg" alt="" style="height: 280px;">
+                                        <img src="img/tentang/kalimantan_1.jpg" alt="Avatar" class="image"  style="height: 280px;">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-6">
