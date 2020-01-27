@@ -1,3 +1,9 @@
+<?php 
+        session_start();
+        if($_SESSION['status']!="login"){
+            header("location:login/login.php?pesan=belum_login");
+        }
+        ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -42,12 +48,7 @@
   }
     </style>
     <body>
-        <?php 
-        session_start();
-        if($_SESSION['status']!="login"){
-            header("location:login/login.php?pesan=belum_login");
-        }
-        ?>
+        
         <!--================Header Menu Area =================-->
         <header class="main_menu_area">
                 <nav class="navbar navbar-expand-lg navbar-light">
